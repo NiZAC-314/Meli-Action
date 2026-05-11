@@ -180,9 +180,9 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p downloads
-          mv release_files/* downloads/
-          git add downloads/
+          mkdir -p madarmanteghi
+          mv release_files/* madarmanteghi/
+          git add madarmanteghi/
           git commit -m "⬇️ YouTube: ${{ steps.retrieve.outputs.filename }} [skip ci]" || echo "Nothing to commit"
           git push
 
